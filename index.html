@@ -6,22 +6,10 @@
     <BODY>
 <p id="add"></p>
  
+    <?php
+    $ip = @file_get_contents("http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js&ip=".$_GET["ip"]);
+    echo $ip;
+    ?>
 
-    <script>
-
-         $.ajax({
-         type: "GET",
-         url: "http://ip-api.com/json/",
-         success: function(data){
-            document.getElementById("add").innerHTML =data["query"]
-                  }
-        });
-
-
-
-
-     </script>
-
-
-    </script></BODY>
+    </BODY>
     </HTML>
