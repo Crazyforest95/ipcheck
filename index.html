@@ -1,12 +1,27 @@
 <HTML>
-<HEAD>
-<TITLE>GetLocalIP</TITLE>
-</HEAD>
-<BODY>
-获取IP:
-  <script>var ipInfo = <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script> ;</script>
-<!-- <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>  -->
-<script type="text/javascript"> 
-document.write(ipInfo["ip"]) 
-</script></BODY>
-</HTML>
+    <HEAD>
+    <TITLE>GetLocalIP</TITLE>
+    <script src="jquery-3.4.1.min.js"></script>
+    </HEAD>
+    <BODY>
+    IP ADDRESS: <p id="add"></p>
+ 
+
+    <script>
+
+         $.ajax({
+         type: "GET",
+         url: "https://api.ipify.org/?format=json",
+         success: function(data){
+            document.getElementById("add").innerHTML =data["ip"]
+                  }
+        });
+
+
+
+
+     </script>
+
+
+    </script></BODY>
+    </HTML>
