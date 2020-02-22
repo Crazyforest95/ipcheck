@@ -4,12 +4,22 @@
     <script src="jquery-3.4.1.min.js"></script>
     </HEAD>
     <BODY>
-<p id="add"></p>
+    IP ADDRESS: <p id="add"></p>
  
-    <?php
-    $ip = @file_get_contents("http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js&ip=".$_GET["ip"]);
-    echo $ip;
-    ?>
 
-    </BODY>
+    <script>
+
+         $.ajax({
+         type: "GET",
+         url: "https://api.ipify.org/?format=json",
+         success: function(data){
+            document.getElementById("demo").innerHTML =data["ip"]
+                  }
+        });
+
+
+
+
+     </script>
+</BODY>
     </HTML>
