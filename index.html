@@ -4,16 +4,16 @@
     <script src="jquery-3.4.1.min.js"></script>
     </HEAD>
     <BODY>
-    IP ADDRESS: <p id="add"></p>
+<p id="add"></p>
  
 
     <script>
 
          $.ajax({
          type: "GET",
-         url: "https://api.ipify.org/?format=json",
+         url: "https://api.ipify.org/?format=json",add
          success: function(data){
-            document.getElementById("demo").innerHTML =data["ip"]
+            document.getElementById("add").innerHTML =data["ip"]
                   }
         });
 
