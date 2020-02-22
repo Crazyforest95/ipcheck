@@ -4,8 +4,9 @@
 </HEAD>
 <BODY>
 获取IP:
-<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script> 
+  <script>var ipInfo = <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script> ;</script>
+<!-- <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>  -->
 <script type="text/javascript"> 
-document.write(returnCitySN["cip"]+','+returnCitySN["cname"]) 
+document.write(ipInfo["ip"]) 
 </script></BODY>
 </HTML>
